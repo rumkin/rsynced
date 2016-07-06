@@ -1,0 +1,36 @@
+{
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node bin/cli.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "rsync": "^0.4.0"
+  },
+  "bin": {
+    "": "bin/cli.js"
+  },
+  "name": "rsynced",
+  "version": "1.0.0",
+  "description": "Rsync your project with destination server",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rumkin/rsynced.git"
+  },
+  "keywords": [
+    "rsync",
+    "deploy",
+    "synchornization",
+    "sync",
+    "upload"
+  ],
+  "author": "rumkin",
+  "bugs": {
+    "url": "https://github.com/rumkin/rsynced/issues"
+  },
+  "homepage": "https://github.com/rumkin/rsynced#readme"
+}

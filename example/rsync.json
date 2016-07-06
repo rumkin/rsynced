@@ -1,0 +1,18 @@
+{
+  "destinations": [
+    {
+      "name": "stage",
+      "host": "127.0.0.1",
+      "user": "root",
+      "dest": "/root/projects/project",
+      "sshKey": "local/key",
+    }
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "tmp",
+    "local",
+    "rsync.json",
+  ]
+}
