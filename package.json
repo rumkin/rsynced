@@ -1,4 +1,7 @@
 {
+  "name": "rsynced",
+  "version": "1.0.2",
+  "description": "Rsync your project with destination server",
   "main": "src/index.js",
   "scripts": {
     "start": "node bin/cli.js"
@@ -10,9 +13,6 @@
   "bin": {
     "rsynced": "bin/cli.js"
   },
-  "name": "rsynced",
-  "version": "1.0.1",
-  "description": "Rsync your project with destination server",
   "directories": {
     "test": "test"
   },
