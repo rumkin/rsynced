@@ -8,10 +8,10 @@
     "rsync": "^0.4.0"
   },
   "bin": {
-    "": "bin/cli.js"
+    "rsynced": "bin/cli.js"
   },
   "name": "rsynced",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rsync your project with destination server",
   "directories": {
     "test": "test"
