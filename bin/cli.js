@@ -27,7 +27,6 @@ sync({
     config,
 })
 .then((result) => {
-    console.log('DONE'); // if verbose?
     process.exit(result ? 0 : 1);
 })
 .catch(error => {

@@ -10,10 +10,6 @@ const defaults = {
 };
 
 function sync({dir, config}) {
-    if (config.cwd) {
-        process.cwd(path.resolve(dir, config.cwd));
-    }
-
     Object.getOwnPropertyNames(defaults).forEach(prop => {
         if (! config.hasOwnProperty(prop)) {
             config[prop] = defaults[prop];
@@ -26,7 +22,7 @@ function sync({dir, config}) {
         : path.join(process.env.HOME, '.ssh', 'id_rsa');
 
     rsync
-    .shell(`ssh -i ${keyFile}`)
+    .shell(`ssh -i "${keyFile}"`)
     .dirs()
     .flags()
     .recursive();

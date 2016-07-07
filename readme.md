@@ -22,7 +22,8 @@ Create `rsync.json` file into root of the project:
       "host": "127.0.0.1",
       "user": "root",
       "dest": "/root/projects/project",
-      "sshKey": "local/key",
+      "source": "build/*",
+      "sshKey": "local/key"
     }
   ],
   "exclude": [
@@ -30,7 +31,7 @@ Create `rsync.json` file into root of the project:
     "build",
     "tmp",
     "local",
-    "rsync.json",
+    "rsync.json"
   ]
 }
 ```
@@ -54,7 +55,7 @@ Install `rsynced` package. Add npm `sync` command into your `package.json`:
 
 Run synchronization:
 ```
-npm sync -- stage
+npm run sync -- stage
 ```
 
 ## License
