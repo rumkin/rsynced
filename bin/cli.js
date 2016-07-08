@@ -6,7 +6,8 @@ const sync = require('../');
 
 const DEBUG = !! process.env.DEBUG;
 const dir = process.env.DIR || process.cwd();
-const config = require(path.resolve(dir, 'rsync.json'));
+const syncfile = process.env.SYNCFILE || path.join(dir, 'rsync.json');
+const config = require(path.resolve(process.cwd(), syncfile));
 
 const name = process.argv[2] || 'default';
 

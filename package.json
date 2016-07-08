@@ -1,6 +1,6 @@
 {
   "name": "rsynced",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Rsync your project with destination server",
   "main": "src/index.js",
   "scripts": {
