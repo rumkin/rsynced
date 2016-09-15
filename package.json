@@ -1,10 +1,11 @@
 {
   "name": "rsynced",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Rsync your project with destination server",
   "main": "src/index.js",
   "scripts": {
-    "start": "node bin/cli.js"
+    "start": "node bin/cli.js",
+    "test": "mocha test/**.spec.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -16,7 +17,9 @@
   "directories": {
     "test": "test"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^3.0.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rumkin/rsynced.git"

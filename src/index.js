@@ -9,7 +9,7 @@ const defaults = {
     source: '.',
 };
 
-function sync({dir, config}) {
+function create(dir, config) {
     Object.getOwnPropertyNames(defaults).forEach(prop => {
         if (! config.hasOwnProperty(prop)) {
             config[prop] = defaults[prop];
@@ -43,13 +43,25 @@ function sync({dir, config}) {
         rsync.include(config.include);
     }
 
+    if (config.owner) {
+        rsync.set('owner', config.owner);
+    }
+
+    if (config.group) {
+        rsync.set('group', config.group);
+    }
+
     rsync.destination(
         path.join(
             config.user + '@' + config.host + ':' + (config.root || ''), config.dest
         )
     );
 
-    return exec(rsync);
+    return rsync;
+}
+
+function sync(options = {}) {
+    return exec(create(options.dir, options.config));
 }
 
 function exec(rsync) {
@@ -96,4 +108,5 @@ function exec(rsync) {
     });
 }
 
+sync.create = create;
 sync.defaults = defaults;
