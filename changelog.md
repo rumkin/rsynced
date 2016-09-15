@@ -1,4 +1,11 @@
-### v1.2.0
+
+### v1.3.0
+
+* Remove `owner` option.
+* Remove `group` option.
+* Add `chown` option.
+
+### v1.2.0 (Deprecated)
 
 * Add `owner` option.
 * Add `group` option.

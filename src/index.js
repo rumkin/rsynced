@@ -43,12 +43,8 @@ function create(dir, config) {
         rsync.include(config.include);
     }
 
-    if (config.owner) {
-        rsync.set('owner', config.owner);
-    }
-
-    if (config.group) {
-        rsync.set('group', config.group);
+    if (config.chown) {
+        rsync.set('a').set('chown', config.chown);
     }
 
     rsync.destination(

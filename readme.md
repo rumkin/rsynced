@@ -21,7 +21,7 @@ Create `rsync.json` file into root of the project:
       "name": "stage",
       "host": "127.0.0.1",
       "user": "root",
-      "group": "www-data",
+      "chown": ":www-data",
       "dest": "/root/projects/project",
       "source": "build/*",
       "sshKey": "local/key"
